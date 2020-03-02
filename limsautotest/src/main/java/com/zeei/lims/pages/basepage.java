@@ -12,9 +12,9 @@ public class basepage {
 
 
     public static String url ="http://47.101.169.199:9000/web/system";
+    public static String path="D:\\工具集合\\Chrome 78.0.3904.87增强版\\Chrome\\App\\webdriver.exe";
 
-
-    public  static WebDriver webDriver = new ChromeDriver();
+    public  static WebDriver webDriver ;
 
     public  static WebElement webElement;
     public  static void sendkeys(String str){
@@ -29,5 +29,16 @@ public class basepage {
 
         return  new WebDriverWait(webDriver,10).until(isTrue);
 
+    }
+
+    public WebDriver startChrome(String path){
+        System.setProperty("webDriver.chrome.driver",path);
+        return new ChromeDriver();
+
+    }
+
+    public static void main(String[] args) {
+        basepage a = new basepage();
+        a.startChrome(path);
     }
 }
