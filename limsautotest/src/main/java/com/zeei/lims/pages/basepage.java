@@ -11,11 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class basepage {
 
 
-    public static String url ="http://47.101.169.199:9000/web/system";
-    public static String path="D:\\工具集合\\Chrome 78.0.3904.87增强版\\Chrome\\App\\webdriver.exe";
-
-    public  static WebDriver webDriver ;
-
+    public static String url ="http://47.111.169.199:8080/web/system/";
+//    public static String path="D:\\工具集合\\Chrome 78.0.3904.87增强版\\Chrome\\App\\webdriver.exe";
+    public static String path="C:\\Program Files (x86)\\Google\\Chrome\\Application\\80.0.3987.122\\chromedriver.exe";
+    public  static WebDriver webDriver;
     public  static WebElement webElement;
     public  static void sendkeys(String str){
         webElement.clear();
@@ -32,8 +31,8 @@ public class basepage {
     }
 
     public WebDriver startChrome(String path){
-        System.setProperty("webDriver.chrome.driver",path);
-        return new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver",path);
+        return webDriver =new ChromeDriver();
 
     }
 
