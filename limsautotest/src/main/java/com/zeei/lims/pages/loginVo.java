@@ -9,5 +9,5 @@ public class loginVo {
 
     public static  By loginbutton= By.className("z-login__btn");;
 
-
+    public  static String S ="HAHA";
 }
